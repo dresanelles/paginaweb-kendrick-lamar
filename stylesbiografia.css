@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color:rgb(235, 199, 230) rgb(191, 172, 226) ;
+}
+
+/* Pruebas  */
+
+/* * {
+    outline: 1px solid red;
+} */
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 250px 1fr; /* Sidebar y contenido */
+    grid-template-rows: 100px 1fr auto; /* header, contenido y footer */
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main"
+        "sidebar carpeta"
+        "sidebar footer";
+}
+
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    grid-area: sidebar;
+    background-color: #645CBB;
+    color: white;
+    padding: 20px;
+    position:fixed;
+    top: 0;
+    height: 100vh;
+}
+
+ 
+
+
+.sidebar h2 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    color: #EBC7E6;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    color: #BFACE2;
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    height:100px;
+    background-color: #A084DC;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h2 {
+    font-size: 50px;
+}
+
+.header h2:hover {
+    color: #EBC7E6;
+}
+
+
+.kendrick { 
+    grid-area: main;
+    display: grid;
+    /* width: 100%;
+    height: 100vh; */
+    background-color: white;
+    grid-template-columns: 1fr 400px;
+    padding: 20px;
+
+}
+
+.foto-kendrickbio img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+
+}
+
+.texto-parrafo{
+    align-self: center;
+    text-align: center;
+
+
+}
+
+.carpeta {
+    grid-area: carpeta;
+    position: relative;
+    top:-200px;
+    left: 300px;
+}
+
+.carpetas {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-style: italic;
+}
+
+.carpeta img {
+    display: grid;
+    width:50px;
+    height:auto;  
+    position:static;
+    padding: 5px;
+}
+
+.carpetas:hover {
+    transform: translateY(-5px);
+}
+
+
+.PiePagina {
+    grid-area: footer;
+    background-color: #EBC7E6;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+
+}
